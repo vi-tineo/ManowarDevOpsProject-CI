@@ -8,10 +8,10 @@ func TestCalcularPreco(t *testing.T) {
 		estudante bool
 		esperado  float64
 	}{
-		{2, true, 1000.0},   // 2 ingressos com desconto de estudante
-		{1, false, 1000.0},  // 1 ingresso preço cheio
-		{3, true, 1500.0},   // 3 ingressos com desconto
-		{4, false, 4000.0},  // 4 ingressos preço cheio
+		{2, true, 1000.0},
+		{1, false, 1000.0},
+		{3, true, 1500.0},
+		{4, false, 4000.0},
 	}
 
 	for _, tt := range tests {

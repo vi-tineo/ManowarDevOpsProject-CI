@@ -9,7 +9,7 @@ import (
 )
 
 var ingressosDisponiveis = 100
-var evento = "Manowar True Metal Concert"
+var evento = "Manowar True Metal Concert Test"
 
 func main() {
 	http.HandleFunc("/", homeHandler)

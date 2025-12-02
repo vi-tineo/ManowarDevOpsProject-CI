@@ -1,9 +1,8 @@
 name: CI-GitOps
 
 on:
-  workflow_dispatch:   # d[a pra executar manualmente
-  push:
-    branches: [ "main" ]
+  workflow_run:   # d[a pra executar manualmente
+      workflows: ["CI Pipeline"]
 
 jobs:
   update-gitops:

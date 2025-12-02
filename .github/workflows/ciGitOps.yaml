@@ -13,13 +13,13 @@ jobs:
       - name: Checkout GitOps repo
         uses: actions/checkout@v3
         with:
-          repository: vi-tineo/ManowarK8sGitOps
+          repository: vi-tineo/ManowarK8sGitOps-CI
           token: ${{ secrets.GITOPS_TOKEN }}
           path: gitops
 
       - name: Update manifest
         run: |
-          cd gitops/k8s
+          cd k8s/
           sed -i "s|image: vitortineo/manowar:.*|image: vitortineo/manowar:${{ github.sha }}|" manoDeploy.yaml
           git config user.name "salazar"
           git config user.email "salazart@users.noreply.github.com"
